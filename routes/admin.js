@@ -20,7 +20,6 @@ router.post(
   "/add-product",
   [
     expressValidator.body("title").isString().isLength({ min: 3 }).trim(),
-    expressValidator.body("imageUrl").isURL(),
     expressValidator.body("price").isFloat(),
     expressValidator.body("description").isLength({ min: 5, max: 200 }).trim(),
   ],
@@ -34,7 +33,6 @@ router.post(
   "/edit-product",
   [
     expressValidator.body("title").isString().isLength({ min: 3 }).trim(),
-    expressValidator.body("imageUrl").isURL(),
     expressValidator.body("price").isFloat(),
     expressValidator.body("description").isLength({ min: 5, max: 200 }).trim(),
   ],
